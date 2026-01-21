@@ -1,41 +1,64 @@
 # MasterSolver-OS
 
-🧠 The Operating System for Governance, Risk and Decision Intelligence
+🧠 **The Operating System for Governance, Risk and Decision Intelligence**
 
 MasterSolver-OS is a modular intelligence engine designed to detect
 invisible operational risks and transform them into structured,
-actionable decision signals.
+actionable decision signals — before collapse happens.
 
-This project was created to address a critical gap in organizations:
-problems are usually detected only after damage has already occurred.
+---
 
-## Live MVP
+## 🚀 Live MVP
 
-🚀 Cloud Run deployment:
-https://mastersolver-os-sig-1-8-1011493698356.us-west1.run.app/
+The current MVP is deployed on Google Cloud Run:
 
-## What is MasterSolver-OS?
+👉 https://mastersolver-os-sig-1-8-1011493698356.us-west1.run.app/
 
-It is not a dashboard.
-It is not just an API.
+Health check:
 
-MasterSolver-OS works as a **governance operating system**,
-connecting signals, risks and decision readiness in real time.
+---
 
-## Current Status
+## 🧩 What is MasterSolver-OS?
 
-- Version: v0.1.0-mvp
-- Stage: Experimental
-- Focus: Signal detection and decision intelligence
+This is **not** just an API.  
+This is **not** a dashboard.
 
-## Core Principles
+MasterSolver-OS is designed as a **governance operating system** that
+connects weak signals, operational risks and decision readiness
+into a single intelligence layer.
 
-- Detect before collapse
-- Make risk visible
-- Turn chaos into intelligence
-- Support high-stakes decisions
+---
 
-## Vision
+## 🏗️ Architecture
 
-To become the foundational layer for governance,
-risk management and decision intelligence in complex operations.
+The system follows a cloud-native, modular architecture focused on
+early signal detection and decision support.
+
+📄 Read more:  
+👉 [Architecture Overview](docs/architecture.md)
+
+---
+
+## ⚙️ Tech Stack
+
+- Python 3.11
+- FastAPI
+- Uvicorn
+- Docker
+- Google Cloud Run
+
+---
+
+## ▶️ Run Locally
+
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+cd backend
+docker build -t mastersolver-os .
+docker run -p 8080:8080 mastersolver-os
+
+---
+
+
